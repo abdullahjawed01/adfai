@@ -1,13 +1,15 @@
 
 import './App.css'
-import LandingPage from './landing'
+// import LandingPage from './landing'
+import LandingPageV2 from './landingPageV2'
 
 function App() {
   
 
   return (
     <>
-    <LandingPage></LandingPage>
+    {/* <LandingPage></LandingPage> */}
+    <LandingPageV2></LandingPageV2>
    
     </>
   )
