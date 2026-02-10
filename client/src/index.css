@@ -1,1 +1,7 @@
 @import "tailwindcss";
+canvas {
+  image-rendering: optimizeQuality;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}

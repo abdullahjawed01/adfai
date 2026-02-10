@@ -1,122 +1,133 @@
+// import { motion } from "framer-motion";
+// import { Typewriter } from "react-simple-typewriter";
+// import HeroImage from "./assets/image.png";
+
+// export default function AdfaiTechLanding() {
+//   return (
+//     <div className="min-h-screen bg-black text-white overflow-hidden relative">
+//       {/* NAVBAR */}
+//       <header className="fixed top-6 left-1/2 -translate-x-1/2 w-[92%] bg-white/90 backdrop-blur-xl rounded-2xl px-8 py-4 flex items-center justify-between z-50 shadow-2xl">
+//         <div className="font-extrabold text-black text-xl tracking-wide">ADFai Tech</div>
+//         <nav className="space-x-7 text-sm font-semibold text-black">
+//           <a href="#">Home</a>
+//           <a href="#">Portfolio</a>
+//           <a href="#">Services</a>
+//           <a href="#">About Us</a>
+//           <a href="#">Contact Us</a>
+//         </nav>
+//       </header>
+
+//       {/* HERO */}
+//       <section className="relative min-h-screen grid grid-cols-1 lg:grid-cols-2 items-center px-[6%] pt-40">
+//         {/* IMAGE SIDE */}
+//         <motion.div
+//           initial={{ opacity: 0, scale: 0.9 }}
+//           animate={{ opacity: 1, scale: 1 }}
+//           transition={{ duration: 1.2 }}
+//           className="relative h-[80vh] hidden lg:block"
+//         >
+//           <img
+//             src={HeroImage}
+//             alt="ADFai Tech Hero"
+//             className="h-full w-full object-contain"
+//           />
+//         </motion.div>
+
+//         {/* TEXT SIDE */}
+//         <motion.div
+//           initial={{ opacity: 0, x: 80 }}
+//           animate={{ opacity: 1, x: 0 }}
+//           transition={{ duration: 1 }}
+//           className="z-10"
+//         >
+//           <h1 className="text-6xl md:text-7xl font-extrabold leading-tight tracking-wide">
+//             <Typewriter
+//               words={["UNITED OF WEB", "AI DRIVEN FUTURE", "DIGITAL EMPIRE"]}
+//               loop={0}
+//               cursor
+//               cursorStyle="|"
+//               typeSpeed={70}
+//               deleteSpeed={40}
+//               delaySpeed={1800}
+//             />
+//           </h1>
+//           <p className="mt-6 text-white/70 max-w-xl">
+//             Building intelligent digital experiences with precision, motion, and modern architecture.
+//           </p>
+//         </motion.div>
+
+//         {/* NETWORK GRID */}
+//         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(#ffffff22_1px,transparent_1px)] bg-size-[90px_90px]" />
+//       </section>
+
+//       {/* SERVICES */}
+//       <section className="grid grid-cols-1 md:grid-cols-3 bg-[#0b0b0b] border-t border-white/10">
+//         <motion.div whileHover={{ scale: 1.05 }} className="py-8 text-center font-bold tracking-wide">WEBSITE DEVELOPMENT</motion.div>
+//         <motion.div whileHover={{ scale: 1.05 }} className="py-8 text-center font-bold tracking-wide border-x border-white/10">ENTERPRISE SOLUTIONS</motion.div>
+//         <motion.div whileHover={{ scale: 1.05 }} className="py-8 text-center font-bold tracking-wide">MARKETING & SEO</motion.div>
+//       </section>
+//     </div>
+//   );
+// }
+
 import { motion } from "framer-motion";
-import { Button } from "../components/ui/button";
-import { Card, CardContent } from "../components/ui/card";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { Typewriter } from "react-simple-typewriter";
+import HeroImage from "./assets/image.png"; // Replace with your hero image
 
-export default function LandingPageV4() {
+export default function HeroSection() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#f8fafc] via-[#eef2ff] to-[#ecfeff] text-slate-900">
+    <div className="relative min-h-screen w-full">
+      {/* GLASS NAVBAR */}
+     {/* GLASS NAVBAR */}
+<header className="fixed top-6 left-1/2 -translate-x-1/2 z-999 w-[92%] bg-white/2 backdrop-blur-lg rounded-2xl px-8 py-4 flex justify-between items-center shadow-xl">
+  <div className="text-xl font-bold text-white">Adfai Tech </div>
+  <nav className="space-x-6 text-white font-medium">
+    <a href="#home" className="hover:text-gray-800 transition">Home</a>
+    <a href="#portfolio" className="hover:text-gray-800 transition">Portfolio</a>
+    <a href="#about" className="hover:text-gray-800 transition">About</a>
+    <a href="#contact" className="hover:text-gray-800 transition">Contact</a>
+  </nav>
+</header>
 
-      {/* NAVBAR */}
-      <header className="sticky top-0 z-50 backdrop-blur-xl bg-white/70 border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <span className="text-xl font-bold tracking-tight">
-            Adfai<span className="text-indigo-600">TECH</span>
-          </span>
-          <nav className="hidden md:flex gap-10 text-sm text-slate-600">
-            <a className="hover:text-slate-900">Creators</a>
-            <a className="hover:text-slate-900">Process</a>
-            <a className="hover:text-slate-900">Pricing</a>
-            <a className="hover:text-slate-900">Contact</a>
-          </nav>
-          <Button className="rounded-full bg-indigo-600 hover:bg-indigo-500 text-white">
-            Get Started
-          </Button>
-        </div>
-      </header>
 
-      {/* HERO */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-indigo-200/40 via-transparent to-cyan-200/40" />
 
-        <div className="relative max-w-7xl mx-auto px-6 py-32 grid lg:grid-cols-2 gap-20 items-center">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-indigo-100 text-indigo-700 text-sm font-medium">
-              <Sparkles className="w-4 h-4" />
-              AI · Design · Engineering
-            </div>
-            <h1 className="text-5xl xl:text-6xl font-extrabold leading-tight mb-6">
-              Build Digital
-              <br />
-              Products That <span className="text-indigo-600">Scale</span>
-            </h1>
-            <p className="text-slate-600 text-lg max-w-xl mb-10">
-              We help ambitious teams launch and grow with intelligent strategy,
-              refined design, and scalable technology.
-            </p>
-            <div className="flex gap-5">
-              <Button size="lg" className="rounded-full bg-indigo-600 hover:bg-indigo-500 text-white">
-                Start a Project
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="rounded-full border-slate-300"
-              >
-                View Work <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
-            </div>
-          </motion.div>
+      {/* HERO SECTION */}
+      <section
+        id="home"
+        className="relative flex flex-col lg:flex-row items-center justify-between min-h-screen px-8 lg:px-20 bg-black"
+        style={{
+          backgroundImage: `url(${HeroImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "right center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        {/* DARK OVERLAY */}
+        <div className="absolute inset-0 bg-black/60 z-10"></div>
 
-          {/* FEATURE PANEL */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.9, delay: 0.15 }}
-          >
-            <Card className="rounded-3xl bg-white/80 backdrop-blur-xl border border-slate-200 shadow-xl">
-              <CardContent className="p-12 space-y-8">
-                {["Strategy-first execution", "Elegant UX systems", "AI-powered automation", "Enterprise-grade delivery"].map(
-                  (item) => (
-                    <div key={item} className="flex items-center gap-4">
-                      <div className="w-10 h-10 rounded-full bg-indigo-600/10 flex items-center justify-center text-indigo-600 font-bold">✓</div>
-                      <span className="font-medium text-slate-700">{item}</span>
-                    </div>
-                  )
-                )}
-              </CardContent>
-            </Card>
-          </motion.div>
-        </div>
+        {/* TEXT CONTENT */}
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          className="relative z-20 w-full lg:w-1/2 mt-32 lg:mt-0 space-y-6 text-white"
+        >
+          <h1 className="text-5xl lg:text-7xl font-extrabold leading-tight drop-shadow-lg">
+            <Typewriter
+              words={["Premier Digital Agency", "Creative & Tech-Driven", "Modern Web Experiences", "SEO & Marketing Experts"]}
+              loop={0}
+              cursor
+              cursorStyle="|"
+              typeSpeed={60}
+              deleteSpeed={40}
+              delaySpeed={1800}
+            />
+          </h1>
+          <p className="text-lg max-w-lg drop-shadow-md">
+            Crafting stunning digital experiences with world-class design and performance for brands that want to lead.
+          </p>
+        </motion.div>
       </section>
-
-      {/* SERVICES */}
-      <section className="max-w-7xl mx-auto px-6 py-32">
-        <div className="grid md:grid-cols-3 gap-12">
-          <ServiceCard title="Product Strategy" text="Clear roadmaps aligned with business outcomes." />
-          <ServiceCard title="UX & UI Design" text="Minimal, elegant, and conversion-focused interfaces." />
-          <ServiceCard title="Engineering" text="Scalable systems built for performance and growth." />
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-32 text-center bg-gradient-to-r from-indigo-600 to-cyan-600 text-white">
-        <h2 className="text-4xl font-bold mb-6">Ready to Elevate Your Product?</h2>
-        <p className="text-white/80 mb-10">Let’s design and build something remarkable together.</p>
-        <Button size="lg" className="rounded-full bg-white text-indigo-700 hover:bg-slate-100">
-          Book a Call
-        </Button>
-      </section>
-
-      {/* FOOTER */}
-      <footer className="py-10 text-center text-sm text-slate-500 bg-white">
-        © {new Date().getFullYear()} Adfai TECH. All rights reserved.
-      </footer>
     </div>
-  );
-}
-
-function ServiceCard({ title, text }: { title: string; text: string }) {
-  return (
-    <Card className="rounded-3xl bg-white border border-slate-200 hover:shadow-xl transition">
-      <CardContent className="p-10">
-        <h3 className="text-2xl font-semibold mb-4">{title}</h3>
-        <p className="text-slate-600 leading-relaxed">{text}</p>
-      </CardContent>
-    </Card>
   );
 }
